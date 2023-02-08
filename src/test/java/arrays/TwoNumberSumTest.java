@@ -1,5 +1,6 @@
-package arrays.two_number_sum;
+package arrays;
 
+import arrays.TwoNumberSum;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

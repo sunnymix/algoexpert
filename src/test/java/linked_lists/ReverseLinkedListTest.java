@@ -1,20 +1,12 @@
-package linked_lists.reverse_linked_list;
+package linked_lists;
 
 import org.junit.jupiter.api.Test;
 
-import static linked_lists.reverse_linked_list.ReverseLinkedList.*;
+import static linked_lists.ReverseLinkedList.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static linked_lists.LinkedList.*;
 
 class ReverseLinkedListTest {
-
-    @Test
-    void should_str_of() {
-        assertEquals("", str(of()));
-        assertEquals("1", str(of(1)));
-        assertEquals("1 -> 2", str(of(1, 2)));
-        assertEquals("1 -> 2 -> 3", str(of(1, 2, 3)));
-        assertEquals("1 -> 2 -> 3 -> 4", str(of(1, 2, 3, 4)));
-    }
 
     @Test
     void should_reverse() {
