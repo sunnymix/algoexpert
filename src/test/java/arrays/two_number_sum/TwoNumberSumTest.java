@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class TwoNumberSumTest {
-
     private TwoNumberSum instance;
 
     @BeforeEach
@@ -29,5 +28,4 @@ class TwoNumberSumTest {
     void should_return_array_2_3_for_array_1_2_3_target_sum_5() {
         assertArrayEquals(new int[]{2, 3}, instance.twoNumberSum(new int[]{1, 2, 3}, 5));
     }
-
 }
