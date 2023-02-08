@@ -19,11 +19,11 @@ class ReverseLinkedListTest {
 
     @Test
     void should_reverseII() {
-        assertEquals("", str(reverseII(of())));
-        assertEquals("1", str(reverseII(of(1))));
-        assertEquals("2 -> 1", str(reverseII(of(1, 2))));
-        assertEquals("3 -> 2 -> 1", str(reverseII(of(1, 2, 3))));
-        assertEquals("4 -> 3 -> 2 -> 1", str(reverseII(of(1, 2, 3, 4))));
+        assertEquals("", str(reverseII(of(""))));
+        assertEquals("1", str(reverseII(of("1"))));
+        assertEquals("2 -> 1", str(reverseII(of("1 -> 2"))));
+        assertEquals("3 -> 2 -> 1", str(reverseII(of("1 -> 2 -> 3"))));
+        assertEquals("4 -> 3 -> 2 -> 1", str(reverseII(of("1 -> 2 -> 3 -> 4"))));
     }
 
 }
