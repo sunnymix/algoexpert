@@ -1,7 +1,10 @@
 package linked_lists;
 
+import javax.swing.text.rtf.RTFEditorKit;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.IntStream;
 
 /**
  * tool
@@ -16,15 +19,17 @@ public class LinkedList {
     }
 
     public static LinkedList of(int... items) {
-        LinkedList head = null;
-        LinkedList pre = null;
-        for (int item : items) {
-            LinkedList node = new LinkedList(item);
-            if (pre != null) pre.next = node;
-            if (head == null) head = node;
-            pre = node;
-        }
-        return head;
+        return of(false, items);
+    }
+
+    public static LinkedList of(boolean setupLoopForSameValue, int... items) {
+        if (items.length == 0) return null;
+        String str = String.join(" -> ", Arrays.stream(items).mapToObj(String::valueOf).toList());
+        return of(setupLoopForSameValue, str);
+    }
+
+    public static LinkedList of(String str) {
+        return of(false, str);
     }
 
     /**
@@ -33,7 +38,7 @@ public class LinkedList {
      * @param str 1 -> 2 -> 3 -> 4
      * @return LinkedList
      */
-    public static LinkedList of(String str) {
+    public static LinkedList of(boolean setupLoopForSameValue, String str) {
         if (str == null || str.trim().length() == 0) return null;
         Map<Integer, LinkedList> createdNodes = new HashMap<>();
         String[] split = str.split("->");
@@ -42,8 +47,8 @@ public class LinkedList {
         for (String item : split) {
             int number = Integer.parseInt(item.trim());
             LinkedList createdNode = createdNodes.get(number);
-            if (createdNode != null && pre != null) {
-                // set loop
+            if (setupLoopForSameValue && createdNode != null && pre != null) {
+                // setup loop
                 pre.next = createdNode;
                 break;
             }

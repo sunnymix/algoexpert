@@ -22,9 +22,9 @@ class LinkedListTest {
         assertEquals("1", str(of("1")));
         assertEquals("1 -> 2", str(of("1 -> 2")));
         assertEquals("1 -> 2 -> 3", str(of("1 -> 2 -> 3")));
-        assertEquals("1 -> 2 -> 3 -> 1*", str(of("1 -> 2 -> 3 -> 1")));
-        assertEquals("1 -> 2 -> 3 -> 2*", str(of("1 -> 2 -> 3 -> 2")));
-        assertEquals("1 -> 2 -> 3 -> 4 -> 5 -> 2*", str(of("1 -> 2 -> 3 -> 4 -> 5 -> 2")));
+        assertEquals("1 -> 2 -> 3 -> 1*", str(of(true, "1 -> 2 -> 3 -> 1")));
+        assertEquals("1 -> 2 -> 3 -> 2*", str(of(true, "1 -> 2 -> 3 -> 2")));
+        assertEquals("1 -> 2 -> 3 -> 4 -> 5 -> 2*", str(of(true, "1 -> 2 -> 3 -> 4 -> 5 -> 2")));
     }
 
 }
