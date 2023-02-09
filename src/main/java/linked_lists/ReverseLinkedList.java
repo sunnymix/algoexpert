@@ -1,5 +1,8 @@
 package linked_lists;
 
+/**
+ * (hard)
+ */
 public class ReverseLinkedList {
     public static LinkedList reverse(LinkedList head) {
         LinkedList p1 = null, p2 = head;

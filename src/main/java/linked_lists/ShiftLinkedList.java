@@ -1,6 +1,8 @@
 package linked_lists;
 
 /**
+ * (hard)
+ *
  * 0 -> 1 -> 2 -> 3 -> 4 -> 5
  *
  * k = 2:

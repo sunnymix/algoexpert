@@ -3,6 +3,9 @@ package linked_lists;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * tool
+ */
 public class LinkedList {
     public int value;
     public LinkedList next;
